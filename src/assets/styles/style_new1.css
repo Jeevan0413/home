@@ -14,7 +14,7 @@
     --bg-card-hover: #E4F0FA;
 
     --text-main: #0D2137;
-    --text-muted: #5B7A95;
+    --text-muted: #455A64;
     --text-accent: #29B6F6;
 
     --font-heading: 'Sora', sans-serif;
@@ -25,6 +25,18 @@
     --radius-sm: 8px;
     --radius-md: 16px;
     --radius-lg: 24px;
+
+    /* Missing variables used in components */
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.4);
+    --grad-primary: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --neon-cyan: #00B0FF;
+    --bg-main: #F0F8FF;
+    --bg-soft-1: #E4F0FA;
+}
+
+.bg-soft-1 {
+    background-color: var(--bg-soft-1);
 }
 
 /* Reset & Base Styles */
@@ -552,7 +564,15 @@ nav a.active {
 
 .contact-info {
     padding: 60px;
-    background: linear-gradient(135deg, var(--primary-dark), var(--bg-dark));
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    color: #FFFFFF;
+}
+
+.contact-info h3, 
+.contact-info h4,
+.contact-info p,
+.contact-info span {
+    color: #FFFFFF !important;
 }
 
 .contact-form-box {
@@ -567,11 +587,17 @@ nav a.active {
 .form-group textarea {
     width: 100%;
     padding: 15px;
-    background: var(--bg-dark);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-sm);
-    color: #F0F8FF;
+    color: var(--text-main);
     outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+    opacity: 0.7;
 }
 
 .form-group input:focus,

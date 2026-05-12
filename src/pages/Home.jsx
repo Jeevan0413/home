@@ -484,7 +484,7 @@ const Home = () => {
                 <div className="form-group"><input type="email" placeholder="Your Email" required /></div>
                 <div className="form-group"><input type="tel" placeholder="Phone Number" /></div>
                 <div className="form-group">
-                  <select style={{ width: '100%', padding: '14px 18px', background: 'var(--glass-bg)', border: '1px solid var(--glass-border)', borderRadius: 'var(--radius-sm)', color: 'var(--text-muted)', fontSize: '0.95rem', outline: 'none' }}>
+                  <select style={{ width: '100%', padding: '14px 18px', background: '#FFFFFF', border: '1px solid rgba(0, 0, 0, 0.1)', borderRadius: 'var(--radius-sm)', color: 'var(--text-main)', fontSize: '0.95rem', outline: 'none' }}>
                     <option value="">Service you are interested in</option>
                     {services.map((s, i) => <option key={i} value={s.title}>{s.title}</option>)}
                   </select>
